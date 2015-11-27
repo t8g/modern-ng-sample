@@ -12,7 +12,7 @@ const userList = angular.module('userList', [
       <user remove="userList.remove($index)" email="user.email" ng-repeat="user in userList.users track by $index"></user>
     </div>
     <form name="userList.userAddForm" ng-submit="userList.add()" novalidate>
-      <input ng-model="userList.email" type="email" placeholder="Add user email">
+      <input ng-model="userList.email" type="email" required placeholder="Add user email">
       <button type="submit">Add</button>
     </form>
     {{ users.email }}
