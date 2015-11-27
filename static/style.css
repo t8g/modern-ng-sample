@@ -1,0 +1,71 @@
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: Verdana, sans-serif; 
+	font-size: 100%;
+}
+
+form[name='userList.userAddForm'] input {
+	margin-left: 1em;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	color: #777;
+	padding: .2em;
+	font-size: 1.2em;	
+}
+
+form[name='userList.userAddForm'] button {
+	background: #777;
+	border: none;
+	border-radius: 4px;
+	color: white;
+	padding: .2em 1em;
+	margin-left: 1em;
+	font-size: 1.2em;
+	cursor: pointer;
+}
+
+
+.users {
+	display: flex;
+} 
+ 
+.user {
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	margin: 1em;
+	padding: 1em;
+	color: #777;
+	font-weight: bold;
+	display: flex;	
+	flex-direction: column;
+	position: relative;
+}
+
+.user label {
+	color: #777;
+}
+
+.user span {
+	text-align: center;
+	margin-bottom: 1em;
+}
+
+.user button {
+	position: absolute;
+	top: 0;
+	right: 0;
+	background-color: transparent;
+	border: none;
+	font-size: 1.3em;
+	font-weight: bold;
+	color: #ddd;
+	cursor: pointer;
+}
+
+.user:hover button {
+	color: #777;
+}

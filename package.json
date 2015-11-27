@@ -1,0 +1,25 @@
+{
+  "name": "toto",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "build": "browserify -t babelify src/app.js --outfile static/build.js",
+    "postbuild": "uglifyjs static/build.js -o static/build.js",
+    "start": "budo src/app.js:build.js --dir static --open --live --onupdate 'standard | notify-error' -- -t babelify"
+  },
+  "devDependencies": {
+    "babel": "^5.8.34",
+    "babelify": "^6.4.0",
+    "browserify": "^12.0.1",
+    "budo": "^6.1.0",
+    "notify-error": "^1.2.0",
+    "standard": "^5.4.1",
+    "uglify": "^0.1.5"
+  },
+  "dependencies": {
+    "angular": "^v1.5.0-beta.2",
+    "md5": "^2.0.0"
+  }
+}
